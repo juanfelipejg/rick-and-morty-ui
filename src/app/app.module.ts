@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CharactersModule } from './characters/characters.module';
-import { CharacterContainerComponent } from './characters/containers/character-container/character-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { characterReducer } from './characters/reducer/character.reducter';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     CharactersModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ characters: characterReducer }),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent]

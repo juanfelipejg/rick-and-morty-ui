@@ -8,7 +8,7 @@ import { CharactersFacade } from '../../facades/characters.facade';
   styleUrls: ['./character-container.component.sass']
 })
 export class CharacterContainerComponent implements OnInit {
-  characters$: Observable<any[]>
+  characters$: Observable<any>
   
   constructor( private charactersFacade: CharactersFacade ) { }
 

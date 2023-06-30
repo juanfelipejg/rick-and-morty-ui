@@ -1,5 +1,7 @@
-<ng-container  *ngFor="let item of characters$ | async">
-  <app-character [character]="item"></app-character>
+<ng-container *ngIf="{
+  characters: characters$ | async
+} as data">
+  <ng-container *ngFor="let character of data.characters.characters">
+    <app-character [character]="character"></app-character>
+  </ng-container>
 </ng-container>
-
-
