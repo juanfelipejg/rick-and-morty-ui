@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { AppUiModule } from '../app-ui/app-ui.module';
 import { CharacterComponent } from './components/character/character.component';
 import { CharacterContainerComponent } from './containers/character-container/character-container.component';
-
-
 
 @NgModule({
   declarations: [
@@ -11,10 +10,12 @@ import { CharacterContainerComponent } from './containers/character-container/ch
     CharacterContainerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppUiModule
   ],
   exports:[
-    CharacterContainerComponent
+    CharacterContainerComponent,
+    CharacterComponent
   ]
 })
 export class CharactersModule { }
