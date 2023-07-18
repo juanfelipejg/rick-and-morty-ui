@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,11 +26,7 @@ jobs:
         npm run build --prod
       
       working-directory: .
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
+      
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
