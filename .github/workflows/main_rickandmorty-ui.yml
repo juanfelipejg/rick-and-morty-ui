@@ -50,6 +50,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'rickandmorty-ui'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE9E17C3F83B4ACEBF583050EE34DEF2 }}
-          package: .
+          package: ./dist/rick-and-morty-ui
