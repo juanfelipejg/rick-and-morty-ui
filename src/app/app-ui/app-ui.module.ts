@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { ButtonComponent } from './button/button.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
-  declarations: [CardComponent],
+  declarations: [CardComponent, ButtonComponent],
   imports: [
     CommonModule,
-    NzCardModule
+    NzCardModule,
+    NzButtonModule
   ],
-  exports: [CardComponent]
+  exports: [CardComponent, ButtonComponent]
 })
 export class AppUiModule { }

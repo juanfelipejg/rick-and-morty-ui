@@ -1,4 +1,9 @@
-<section class="layout__container">
+<section class="layout-container">
+  <header>
+    <nav class="layout-container__navbar">
+      <router-outlet name="header"></router-outlet>      
+    </nav>
+  </header>
   <main>
     <router-outlet></router-outlet>
   </main>

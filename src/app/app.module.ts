@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CharactersModule } from './characters/characters.module';
 import { characterReducer } from './characters/reducer/character.reducter';
 import { AppRoutingModule } from './app-routing.module';
+import { UsersModule } from './users/users.module';
 
 registerLocaleData(en);
 
@@ -28,7 +29,8 @@ registerLocaleData(en);
     StoreDevtoolsModule.instrument(),
     FormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    UsersModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

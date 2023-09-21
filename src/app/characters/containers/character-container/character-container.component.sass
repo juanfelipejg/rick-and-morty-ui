@@ -1,5 +1,19 @@
+$tablet-width: 768px
+$computer-width: 1024px
+$monitor-width: 1440px
+  
 .character-container 
-  display: flex
+  display: grid
   gap: 1rem
-  justify-content: center
-  flex-wrap: wrap
+
+@media screen and (min-width: $tablet-width)
+  .character-container 
+    grid-template-columns: repeat(3, 1fr)  
+
+@media screen and (min-width: $computer-width)
+  .character-container 
+    grid-template-columns: repeat(4, 1fr)  
+
+@media screen and (min-width: $monitor-width)
+.character-container 
+  grid-template-columns: repeat(5, 1fr)
