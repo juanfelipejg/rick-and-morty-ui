@@ -7,9 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class LoginComponent {
   @Output() clickEvent = new EventEmitter()
+  showForm: boolean
   
-  login(){
-    console.log('hola mundo')
-    this.clickEvent.emit()
+  login(){    
+    this.showForm = !this.showForm
   }
 }

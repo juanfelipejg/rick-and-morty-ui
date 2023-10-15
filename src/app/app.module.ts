@@ -14,6 +14,11 @@ import { CharactersModule } from './characters/characters.module';
 import { characterReducer } from './characters/reducer/character.reducter';
 import { AppRoutingModule } from './app-routing.module';
 import { UsersModule } from './users/users.module';
+import { UserOutline, LockOutline } from '@ant-design/icons-angular/icons';
+import { IconDefinition } from '@ant-design/icons-angular';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+
+const icons: IconDefinition[] = [ UserOutline, LockOutline ];
 
 registerLocaleData(en);
 
@@ -30,7 +35,8 @@ registerLocaleData(en);
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule, 
-    UsersModule
+    UsersModule,
+    NzIconModule.forRoot(icons)
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
