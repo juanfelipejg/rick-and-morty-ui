@@ -11,9 +11,8 @@ const routes: Routes = [
       { path: '',
         component: CharacterContainerComponent 
       },
-      { path: '',
-        component: UserContainerComponent,
-        outlet: 'header'
+      { path: 'login',
+        component: UserContainerComponent
       }
     ]
   }

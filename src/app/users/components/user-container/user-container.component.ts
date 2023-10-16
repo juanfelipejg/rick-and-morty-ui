@@ -10,8 +10,7 @@ export class UserContainerComponent {
 
   constructor(private facade: UserFacade) { }
 
-  login() {
-    console.log('hola mundo')
-    this.facade.login({ username: 'Horacio', password: '123' })
+  login( formLogin: any) {
+    this.facade.login({ username: formLogin.email, password: formLogin.password })
   }
 }
